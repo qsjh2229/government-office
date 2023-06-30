@@ -1,0 +1,39 @@
+ 
+
+
+#wrap{width: 100%; height: inherit;}
+.container{width: 1400px; height: inherit;margin: 0 auto}
+.container header{width: 100%; height: 130px;}
+.container header .head-menu{width: 100%;  position: relative; margin-top: 30px;position: relative;}
+.container header .head-menu ul{text-align: right;}
+.container header .head-menu ul li{float: left;  right: 0;text-align: right;}
+.container header .head-menu input{  padding: 8px 20px; border-radius: 25px; border: 1px solid rgb(219, 219, 219); background: white; margin-left: 10px; ;}
+.container .head-tit{width: 100%; height: 107px; clear: both; background: tan; }
+.container .head-tit .logo{float: left; margin-top: 35px; background: green;  background: url(./logo.png)no-repeat;width: 270px; height: 47px;}
+.head-menu>ul>.tit-memu{}
+.head-menu{}
+.head-menu>ul>.tit-memu>a{float: left; display: block; text-decoration: none; color: black; }
+#wrap .head-menu>ul>.tit-memu:hover .container{display: block;  border-bottom: 1px solid black; background: teal; width: 100%; height: 500px; padding: 0px 50px;
+  position: absolute;top: 94px; left: -3.55%;}
+
+  .container .leftbox{width:15% ; height: 467px; display: block; color: white;
+    background: rgb(82, 181, 251) ; float: left; margin-top: 13px; padding-top: 20px; padding-right:20px ;
+font-size: 1.5em; font-weight: bold;}
+.head-menu>ul>.tit-memu>a>h2{  display: block; padding: 25px 37px;}
+.head-menu>ul>.tit-memu>.container{  width: 80%; height: 700px;
+   position: absolute;top: 0; ; display: none; }
+  
+.head-menu>ul>.tit-memu>.container>div{float: left;}
+.head-menu>ul>.tit-memu>.container>div>a{text-decoration: none;  }
+.head-menu>ul>.tit-memu>.container>div>a>h3{display: block; background: #efeeee;  text-align: center; width: 220px; padding: 8px 0; margin-left: 20px; color:rgb(57, 57, 57);}
+.head-menu>ul>.tit-memu>.container>div>a>h3:hover{color: white; background:  rgb(82, 181, 251);}
+.head-menu>ul>.tit-memu>.container>div>ul{}
+.head-menu>ul>.tit-memu>.container>div>ul>li{clear: both;}
+.head-menu>ul>.tit-memu>.container>div>ul>li>a{ text-decoration: none; text-align: left; color: rgb(57, 57, 57); padding: 5px 20px; display: block;padding-left:40px; width: 250px; padding-left: 15px;}
+.head-menu>ul>.tit-memu>.container>div>ul>li>a::before{content: '•  ';}
+.head-menu>ul>.tit-memu>.container>div>ul>li>a:hover{color: rgb(82, 181, 251); text-decoration: underline;}
+
+
+
+                                                    
+                                                    

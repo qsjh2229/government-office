@@ -8,6 +8,11 @@
         <link rel="stylesheet" href="../css/reset.css">
         <!-- <link rel="stylesheet" href="./page05.css"> -->
         <link rel="stylesheet" href="../css/page05.css">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+      />
+   
     </head>
     <body>
         <div id="wrap" class="wrapper">
@@ -395,16 +400,17 @@
                         </div>
                       
                        
-                        <div class="head_search">
-                            <ul>
-                                <li>
-                                    <a href="#"><img src="../img/main/ser_open_btn2.png" alt="검색버튼"></a>
-                                </li>
-                                <li>
-                                    <a href=""></a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="head_search">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="../img/main/ser_open_btn2.png" alt="검색버튼" class="searh-btn"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:" class="d-hamBtn"><i class="fas fa-bars"></i></a>
+                                <a href="javascript:" class="d-hamBtn miHamBtm"><i class="fas fa-times"></i></i></a>
+                            </li>
+                        </ul>
+                    </div>
                           <!-- 햄버거 메뉴 -->
                         <div class="header_hamburger_menu">
                             <div class="header_h_menu">
@@ -762,5 +768,32 @@
                 </div>
                   
     </body>    
+    <script defer>
+    
+        let miHamBtn = document.querySelector('.miHamBtm')
+        let dHamBtn = document.querySelector('.d-hamBtn')
+        let dHamMenu= document.querySelector('.header_hamburger_menu')
+        // 햄버거 버튼 누르면 나오기
+        console.log(dHamMenu)
+        dHamBtn.addEventListener('click',function(){
+          dHamMenu.style.display="block"
+          miHamBtn.style.display="block"
+          dHamBtn.style.display="none"
+          
+        
+        })
+        miHamBtn.addEventListener('click',function(){
+          dHamMenu.style.display="none"
+          miHamBtn.style.display="none"
+          dHamBtn.style.display="block"
+          
+        
+        })
+        
+        
+        
+        
+        
+           </script>
 
           

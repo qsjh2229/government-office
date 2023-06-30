@@ -28,6 +28,7 @@ nav{ width: 1400px; height: 450px; margin: 0 auto; position: relative;}
 .head_wraper .head .head_bot{width: 100%; height: 75px;   }
 
 /* 헤더 메뉴 */
+/* 헤더 메뉴 */
 
 
 .head_bot .head_menu ul li .h_ddmenu100 .colorbox{background:  rgb(0, 143, 209);width: 300px; height: inherit; position: absolute; top:127px; left: -300px} 
@@ -50,7 +51,29 @@ background: linear-gradient(90deg, rgba(0,143,209,1) 46%, rgba(255,255,255,1) 47
 .head_bot .head_menu ul li .h_ddmenu .rightbox >ul>li>ul>li>a{font-size: 16px; text-align: left; display: block; position: relative; line-height: 1.2; }
 .head_bot .head_menu ul li .h_ddmenu .rightbox >ul>li>ul>li>a:hover{ color:rgb(0, 143, 209) ; transition: .3s; }
 .head_bot .head_menu ul li .h_ddmenu .rightbox >ul>li>ul>li>a::before{content: "  \00B7"; position: absolute;top: 0;left: 0;}
-.head_bot .head_search{width: 110px;height: 75px;  float: left; line-height: 75px;}
+.head_bot .head_search{width: 110px;height: 75px;  float: left; margin-top: 25px;}
+.head_bot .head_search ul{display: flex; justify-content: space-between; height: 75px;}
+.head_bot .head_search ul i{font-size:  25px; color: #000000;  } 
+.miHamBtm {display: none;}
+.searh-btn{margin-left: 40px;}
+/* 햄버거메뉴 */
+.head_bot .header_hamburger_menu{display: none;} 
+/* 햄버거 메뉴 안만들어서 디스플레이 논 시켜놓음 만든 후 오버 하면 디스플레이 블럭으로 바꾸기 */
+.head_bot .header_hamburger_menu{z-index: 9999; width: 100%; background: rgb(255, 255, 255);position: absolute; left: 0; top: 127px;}  
+.head_bot .header_hamburger_menu .header_h_menu{width: 1400px; margin: 0 auto; background: rgb(71, 7, 71);}  
+.head_bot .header_hamburger_menu .header_h_menu ul{}  
+.head_bot .header_hamburger_menu .header_h_menu >ul >li{ float: left;  margin-left: 20px; width: 18%; margin-bottom: 20px;  min-height: 305px;text-align: center; }  
+.head_bot .header_hamburger_menu .header_h_menu ul li>div{}  
+.head_bot .header_hamburger_menu .header_h_menu ul li>div>ul{}  
+.head_bot .header_hamburger_menu .header_h_menu ul li>div>ul>div{}  
+.head_bot .header_hamburger_menu .header_h_menu ul li>div>ul>li{ box-sizing: border-box; border-top: 1px solid #ccc;}  
+.head_bot .header_hamburger_menu .header_h_menu ul li>div>ul>li:first-child{border: none;}
+.head_bot .header_hamburger_menu .header_h_menu ul li>div>ul>li:nth-child(2){ border: none;}  
+.head_bot .header_hamburger_menu .header_h_menu ul li>div>ul>li a{ text-decoration: none; display: block; color: black; padding: 15px 20px; background: white;}  
+.head_bot .header_hamburger_menu .header_h_menu ul li>div>ul>li .bluebox{ border: none ; text-decoration: none; display: block; color: black; padding: 15px 20px; background: rgb(0, 143, 209); color: white; }  
+.head_bot .header_hamburger_menu .header_h_menu ul li>div>ul>li .bluebox:hover{background: rgb(78, 186, 236); transition: .3s;}
+.head_bot .header_hamburger_menu .header_h_menu ul li>div>ul>li a:hover{background: #f0f0f0; transition: .3s;}
+
 /* 햄버거메뉴 */
 .head_bot .header_hamburger_menu{display: none;} 
 /* 햄버거 메뉴 안만들어서 디스플레이 논 시켜놓음 만든 후 오버 하면 디스플레이 블럭으로 바꾸기 */

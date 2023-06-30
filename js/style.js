@@ -45,7 +45,8 @@ let bannerTextContent = document.querySelectorAll(".text-banner-slide");
 
 let cur = 1;
 
-//네비 배너 li
+
+//li 클론
 const firstLi = bannerBox.firstElementChild; //첫번째 LI를 firstElementChild 로 구함
 const LastLi = bannerBox.lastElementChild; //마지막 LI를 lastElementChild 로 구함
 let firstCloneLi = firstLi.cloneNode(true); //cloneNode 를 통해 firstLi를 복사 한 후 변수 firstCloneLi에 넣음
@@ -53,13 +54,16 @@ let LastCloneLi = LastLi.cloneNode(true); //cloneNode 를 통해 LastLi 복사 �
 bannerBox.appendChild(firstCloneLi);
 bannerBox.insertBefore(LastCloneLi, bannerBox.firstElementChild);
 
-const firstTextLi = bannerText.firstElementChild; //첫번째 LI를 firstElementChild 로 구함
-const LastTextLi = bannerText.lastElementChild; //마지막 LI를 lastElementChild 로 구함
-let firstCloneTextLi = firstTextLi.cloneNode(true); //cloneNode 를 통해 firstLi를 복사 한 후 변수 firstCloneLi에 넣음
-let lastCloneTextLi = LastTextLi.cloneNode(true); //cloneNode 를 통해 LastLi 복사 한 후 변수 LastCloneLi에 넣음
+//텍스트 클론
+const firstTextLi = bannerText.firstElementChild; 
+const LastTextLi = bannerText.lastElementChild; 
+let firstCloneTextLi = firstTextLi.cloneNode(true); 
+let lastCloneTextLi = LastTextLi.cloneNode(true); 
 bannerText.appendChild(firstCloneTextLi);
 bannerText.insertBefore(lastCloneTextLi, bannerText.firstElementChild);
 
+
+//슬라이드 트랜지션
 function transitionSlides() {
   bannerBox.style.transition = ".5s";
   bannerBox.style.transform = `translateX(${-1400 * cur}px)`;
@@ -142,7 +146,43 @@ bannerBoxWrap.addEventListener("mouseout", () => {
   isPaused = false; //마우스가 벗어날 경우 일시정지 상태 해제
 });
 
-//MAIN 첫번째 슬라이드 KCDF 소식
+//첫번째 배너 슬라이드 끝
+
+
+
+
+
+
+
+$('.owl-carousel').owlCarousel({
+  items:13,
+  autoplay:true,
+  autoplayHoverPause:true,
+  loop:true,
+  center:true,
+  margin:20,
+  
+  
+  
+});
+
+
+
+//MAIN 첫번째 슬라이드 
+//KCDF 소식
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
 let mainSlideWrap =document.querySelector(".poster_slide")
 let mainSlide = document.querySelector(".main-slide");
 let mainSlideContent = document.querySelectorAll(".main-slide> li");
@@ -153,16 +193,27 @@ mainCurr = 1;
 let mainSContentWidth = mainSlideContent.scrollWidth;
 console.log(mainSContentWidth);
 
+//전체 li 복사
 let fullLI = [];
 mainSlideContent.forEach(function (li) {
   fullLI.push(li.cloneNode(true));
 });
-
 fullLI.forEach(function (li) {
   mainSlide.appendChild(li);
 });
 
 //무브 함수 만들기
+
+
+
+// 초기 위치 설정
+mainSlide.style.transform = `translateX(${-412 * (mainCurr)}px)`;
+mainSlide.style.width = `${412 * mainSlideContent.length}px`;
+
+// 버튼
+mainSlidePreBtn.addEventListener("click", mainPrev);
+mainSlideNextBtn.addEventListener("click", nextnav);
+
 
 function mainMove() {
   mainSlide.style.transform = `translateX(${-412 * mainCurr}px)`;
@@ -182,6 +233,18 @@ function mainMove() {
     }
   }, 0);
 }
+
+function nextnav() {
+  if (mainCurr < mainSlideContent.length+1 ) {
+    mainCurr++;
+  } else {
+    mainCurr = 0;
+    
+  }
+  mainMove();
+}
+
+//이전으로 가기
 function pmainMove() {
   mainSlide.style.transform = `translateX(${-412 * mainCurr}px)`;
   mainSlide.style.transition = ".5s";
@@ -200,20 +263,6 @@ function pmainMove() {
     }
   }, 500);
 }
-
-function nextnav() {
-  if (mainCurr < mainSlideContent.length+1 ) {
-    mainCurr++;
-  } else {
-    mainCurr = 0;
-    
-  }
-  mainMove();
-}
-
- mainSlide.style.transform = `translateX(${-412 * (mainCurr)}px)`; // 초기 위치 설정
-mainSlide.style.width = `${412 * mainSlideContent.length}px`;
-
 function mainPrev() {
   if (mainCurr > 0) {
     mainCurr--;
@@ -225,16 +274,14 @@ function mainPrev() {
 
     mainCurr--;
     setTimeout(function () {
-      mainSlide.style.transition = ".5s";
+      mainSlide.style.transition = ".0s";
       mainSlide.style.transform = `translateX(${-412 * mainCurr}px)`;
     }, 0);
   }
 }
 
-mainSlidePreBtn.addEventListener("click", mainPrev);
-//넥스트 버튼
-mainSlideNextBtn.addEventListener("click", nextnav);
 
+//자동 슬라이드
 let setIntervalId = setInterval(function () {
   nextnav();
 }, 4000);
@@ -248,6 +295,13 @@ mainSlideWrap.addEventListener("mouseleave", function () {
     nextnav();
   }, 4000);
 });
+
+
+
+ */
+
+
+
 //kcdf 알림
 
 $(".article_chart").each(function () {
@@ -279,14 +333,11 @@ $(".article_chart").each(function () {
 });
 
 
-/* 
- const tourWrap = document.querySelector(".tourwrap")
- const tourcont = document.querySelectorAll(".tour")
- const tourPreBtn = document.querySelector(".fa-chevron-left")
- const tourNextBtn = document.querySelector(".fa-chevron-right")
- const tourPageNum = document.querySelector(".c-pnv")
- */
 
+
+
+
+//시설 소개
 
  const tourWrap =$(".tourwrap")
  const tourcont =$(".tour")
